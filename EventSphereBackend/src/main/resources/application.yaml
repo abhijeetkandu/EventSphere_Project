@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: EventSphere
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/eventsphere
+    username: root
+    password: root
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
+
+server:
+  port: 8080
